@@ -11,9 +11,6 @@ node ('mster')
       echo "Jenkins URL ${env.JENKINS_URL}"
       echo "JOB Name ${env.JOB_NAME}"
   
-  node
-{
-    def mavenHome=tool name:"maven3.6.3"
     stage('checkoutcode')
     {
     git credentialsId: 'e6f7d7c7-17c7-4c8d-86a8-113eeddf83bf', url: 'https://github.com/srinivasa1122/maven-web-application.git'
